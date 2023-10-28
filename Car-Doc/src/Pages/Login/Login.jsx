@@ -10,10 +10,13 @@ const Login = () => {
 
     const handleLogIn = e=>{
         e.preventDefault();
+
+        const form = e.target;
      
         const email = form.email.value;
         const password = form.currentPassword.value;
-        console.log(name, email, password);
+       
+        console.log(email, password);
         signIn(email,password)
         .then(result=>{
             const user = result.user;
